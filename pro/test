@@ -1,0 +1,17 @@
+!blue 2.0
+//=============================================================================
+//
+// File:         rwserve-multi-upload/pro/test
+// Language:     prorenata script
+// Copyright:    Read Write Tools © 2020
+// License:      MIT License
+// Initial date: May 21, 2020
+// Contents:     Run as RWSERVE plugin
+//
+//=============================================================================
+
+//
+// ---------- Run as RWSERVE plugin  ---------- 
+run {
+	sh node --inspect=165.227.11.3:9229 ../../../app/rwserve/dbg/main.js ../etc/multi-upload-config   2> /dev/null
+}

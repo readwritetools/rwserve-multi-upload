@@ -1,0 +1,17 @@
+!blue 2.0
+//=============================================================================
+//
+// File:         rwserve-multi-upload/pro/prepare
+// Language:     prorenata script
+// Copyright:    Read Write Tools © 2020
+// License:      MIT License
+// Initial date: May 21, 2020
+// Contents:     Install/refresh node dependencies 
+//
+//=============================================================================
+
+// ---------- install node module dependencies ---------- 
+run {
+	sh git pull origin master
+	sh git pull github master
+}

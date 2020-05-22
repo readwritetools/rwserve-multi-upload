@@ -1,0 +1,34 @@
+{
+  "name": "rwserve-multi-upload",
+  "version": "1.0.0",
+  "description": "RWSERVE plugin to accept multipart/form-data containing binary image files",
+  "author": "Read Write Tools",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/readwritetools/rwserve-multi-upload.git"
+  },
+  "dependencies": {
+    "rwserve-plugin-sdk": "^1.0.1"
+  },
+  "scripts": {
+    "bump-version": "npm version patch && git push && git push --tags",
+    "start": "rwserve ./etc/multi-upload"
+  },
+  "keywords": [
+    "rwserve",
+    "http2",
+    "plugins",
+    "readwritetools"
+  ],
+  "bugs": {
+    "url": "https://github.com/readwritetools/rwserve-multi-upload/issues"
+  },
+  "homepage": "https://rwserve.readwritetools.com/plugins/rwserve-multi-upload.blue",
+  "files": [
+    "dist",
+    "etc",
+    "img"
+  ]
+}
