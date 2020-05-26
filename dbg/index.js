@@ -34,12 +34,12 @@
 */
 //=============================================================================
 
-import {log} 		from 'rwserve-plugin-sdk';
-import {SC} 		from 'rwserve-plugin-sdk';
-import fs			from 'fs';
-import path			from 'path';
+var log = require('rwserve-plugin-sdk').log;
+var SC = require('rwserve-plugin-sdk').SC;
+var fs = require('fs');
+var path = require('path');
 
-export default class RwserveMultiUpload {
+module.exports = class RwserveMultiUpload {
 
 	constructor(hostConfig) {
 		this.hostConfig = hostConfig;

@@ -18,8 +18,12 @@ server {
 		information-headers on
 	}
 	
+	restrictions {
+        content-length-limit 10485760 	// 10MB
+    }
+
 	request {
-		methods GET,HEAD
+		methods POST
 
 		accept-types {
 			mime-type '*/*'
@@ -30,6 +34,18 @@ server {
 		html    text/html
 	}
 
+	logging {
+		message-type {
+			request     on
+			staging     on
+			information on
+			response    on
+			network     on
+		}
+		information {
+            default               *format='200...'
+        }
+	}
 }
 
 host {
@@ -47,8 +63,8 @@ host {
 		rwserve-multi-upload {
 			location `$PLUGIN-PATH`
 			config {
-				upload-area `$DOCUMENTS-PATH/public/upload-area/`
-				maxbytes 10737418240		// 10 Mb
+				maxbytes 2097152		// 2MB 
+				destination-directory `$DOCUMENTS-PATH/public/uploads/`
 			}
 		}
 		router {

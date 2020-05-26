@@ -14,4 +14,5 @@
 run {
 	sh git pull origin master
 	sh git pull github master
+	sh npm install rwserve-plugin-sdk
 }

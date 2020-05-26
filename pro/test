@@ -15,3 +15,6 @@
 run {
 	sh node --inspect=165.227.11.3:9229 ../../../app/rwserve/dbg/main.js ../etc/multi-upload-config   2> /dev/null
 }
+
+// cd /palau/plugins/rwserve-multi-upload/test
+// curl --verbose -k -X POST --data-binary "@seal-plugin-multipart" -H "content-type: multipart/form-data; boundary='--abcdefghijk'" https://localhost:7443/upload-pics

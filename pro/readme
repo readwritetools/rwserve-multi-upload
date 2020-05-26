@@ -8,10 +8,12 @@
 // Initial date: May 21, 2020
 // Contents:     Convert story to markdown, and copy from hub.readwritetools.com
 //
+// Previewer:	https://pandao.github.io/editor.md/en.html
+//
 //=============================================================================
 
 // ---------- compile .blue into .md and copy from hub.readwritetools.com ---------- 
 run {
 	sh ssh nk024 blue compile /srv/readwritetools.com/hub/public/plugins/ghfm/multi-upload.blue /srv/readwritetools.com/hub/public/plugins/ghfm/multi-upload.md --emit=ghfm
-	sh rsync root@nk024:/srv/readwritetools.com/hub/public/plugins/ghfm/mult-upload.md ../readme.md
+	sh rsync root@nk024:/srv/readwritetools.com/hub/public/plugins/ghfm/multi-upload.md ../readme.md
 }
