@@ -1,6 +1,6 @@
 {
   "name": "rwserve-multi-upload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RWSERVE plugin to accept multipart/form-data containing binary image files",
   "author": "Read Write Tools",
   "license": "MIT",
